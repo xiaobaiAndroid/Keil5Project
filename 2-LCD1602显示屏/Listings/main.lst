@@ -1,0 +1,54 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              04/22/2024 22:31:42 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "LCD1602.h"
+   3          #include "delay.h"
+   4          
+   5          void main()
+   6          {
+   7   1      
+   8   1        while (1)
+   9   1        {
+  10   2          // LCD_Init();
+  11   2          // LCD_ShowChar(1, 1, 'A');
+  12   2          // Delay1ms(2000);
+  13   2          LCD_Init();
+  14   2          LCD_ShowString(2, 1, "Pig");
+  15   2      
+  16   2          Delay1ms(2000);
+  17   2          LCD_Init();
+  18   2          LCD_ShowString(1, 1, "I Love You");
+  19   2          Delay1ms(2000);
+  20   2      
+  21   2          Delay1ms(2000);
+  22   2          LCD_Init();
+  23   2          LCD_ShowNum(2, 1, 100, 3);
+  24   2          Delay1ms(2000);
+  25   2      
+  26   2          // LCD_ShowBinNum(1, 1, 1000, 16);
+  27   2          // LCD_Init();
+  28   2          // Delay1ms(2000);
+  29   2        }
+  30   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     79    ----
+   CONSTANT SIZE    =     15    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

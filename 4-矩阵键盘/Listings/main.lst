@@ -1,0 +1,45 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              04/23/2024 07:37:46 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "MatrixKey.h"
+   3          #include "LCD1602.h"
+   4          
+   5          int num;
+   6          
+   7          void main(){
+   8   1        
+   9   1            LCD_Init();             //LCD初始化
+  10   1        LCD_ShowString(1,1,"MatrixKey:"); //LCD显示数字
+  11   1          while (1)
+  12   1          {
+  13   2               num = matrixKey();
+  14   2            if(num != -1){
+  15   3                LCD_ShowHexNum(2,1,num,2);
+  16   3            }
+  17   2          
+  18   2              
+  19   2          }
+  20   1          
+  21   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     49    ----
+   CONSTANT SIZE    =     11    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
